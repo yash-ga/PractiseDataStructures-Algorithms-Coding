@@ -18,15 +18,18 @@
         </div>
         <div class="text-div">New post</div>
       </div>
-      <div class="searchbar"><input type="text" placeholder="search">
+      <div class="searchbar"><input type="text" onchange="getData()" placeholder="search">
       <img class="searchicon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png" 
       alt="searchICON" >
     </div>
-    <div class="otag">O_</div>
+    <div class="otag">*_*</div>
     <button class="goadfree">Go-AdFree</button>
     <button class="signout">Sign out</button>
     <button class="signup">Sign up</button>
-    </header>
+  </header>
+  <!-- <div class="data">getData()</div> -->
+  <button onclick="getData()">getData</button>
+  <div id="showdata"></div>
   </body>
 </html>
 <script src="./Home.js"></script>

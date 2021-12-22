@@ -1,0 +1,10 @@
+{
+  "result": [
+    { "id": 1, "name": "abc", "img": "https://dummyimage.com/medrect" },
+    { "id": 2, "name": "efg", "img": "https://dummyimage.com/medrect" },
+    { "id": 3, "name": "hij", "img": "https://dummyimage.com/medrect" },
+    { "id": 4, "name": "lmn", "img": "https://dummyimage.com/medrect" },
+    { "id": 5, "name": "opq", "img": "https://dummyimage.com/medrect" },
+    { "id": 6, "name": "stu", "img": "https://dummyimage.com/medrect" }
+  ]
+}
