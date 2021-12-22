@@ -24,6 +24,25 @@
     width: 130px;
     height: 30px;
     border-radius: 5px;
-    text-align: right;
-    padding: 5px;
+    display: flex;
+    padding-top: 5px;
+    
+}
+.img-div{
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.text-div{
+    margin-left: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+.searchbar{
+    /* background-color: #fff; */
+    background: transparent;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    color: #000;
+    margin-left: 100px;
 }
