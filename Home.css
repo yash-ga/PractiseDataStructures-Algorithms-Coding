@@ -14,7 +14,7 @@
     color:#fff;
     font-size: xx-large;
     font-style: normal;
-    background-color: green;
+    /* background-color: green; */
     text-align: center;
     padding-top: 5px;
 }
@@ -25,7 +25,8 @@
     height: 30px;
     border-radius: 5px;
     display: flex;
-    padding-top: 5px;
+    padding: 5px;
+    margin-top: 10px;
     
 }
 .img-div{
@@ -38,11 +39,65 @@
     color: #fff;
 }
 .searchbar{
-    /* background-color: #fff; */
-    background: transparent;
-    width: 300px;
+    background-color: #fff;
+    /* background: transparent; */
+    /* z-index: -1; */
+    width: 230px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 3px;
     color: #000;
-    margin-left: 100px;
+    margin-left: 150px;
+    margin-top: 10px;
+    display: flex;
+}
+.searchicon{
+    width: 30px;
+    height: 30px;
+    /* background-color: black; */
+    border-radius: 3px;
+}
+.otag{
+    width: 32px;
+    height: 32px;
+    background-color: none;
+    color: white;
+    display: flex;
+    margin-left: 50px;
+    place-content: center;
+    /* margin-top: 10px; */
+    padding: 15px;
+}
+.otag:hover{
+    
+    background: turquoise;
+}
+.goadfree{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: purple;
+    color: #fff;
+    border: none;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.signout{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: #051d5b;
+    color: #fff;
+    border: none;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.signup{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: green;
+    color: #fff;
+    border: none;
+    margin-left: 50px;
+    margin-top: 10px;
 }
