@@ -18,3 +18,13 @@ async function getData() {
     showdata.append(data_div);
   });
 }
+
+
+
+window.addEventListener('scroll', function() {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+    getData();
+  }
+});
+
+getData();
