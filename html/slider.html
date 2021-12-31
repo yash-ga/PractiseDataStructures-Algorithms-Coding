@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+</head>
+<style>
+    img{
+        width: 400px;
+        height: 400px;
+        margin: auto;
+    }
+</style>
+<body></body>
+<script>
+    var images=[]
+    var time=1000;
+    images[0]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrp2SgWV4Vc2tpGDMYR1FMRGq6zswXNC74qw&usqp=CAU"
+    images[1]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbZ7qpaYziX05rOUPQdizM4BJnsKbuXn5tA&usqp=CAU"
+    images[2]="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrH1lMrebFDMKBBUUv2ZiIgGxXN7lam0n-pw&usqp=CAU"
+    var i=0;
+    setInterval(function callSlider(){
+        document.slide.src=images[i]
+        if(i<images.length-1){
+            i++
+        }
+        else{
+            i=0
+        }
+    },time)
+    window.slide=callSlider;
+</script>
+<img name="slide"/>
+</html>
