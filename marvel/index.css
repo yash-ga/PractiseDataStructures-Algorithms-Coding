@@ -1,0 +1,40 @@
+#header{
+    display: flex;
+    padding: 5px;
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+}
+.marvel{
+    width: 15%;
+    color: white;
+    background-color: red;
+    text-align: center;
+    border-radius: 5px;
+    font-size: larger;
+
+}
+input{
+    width: 300px;
+    outline: none;
+    border-radius: 10px;
+    
+    margin: auto;
+}
+button{
+    background-color: green;
+    color: white;
+    font-size: larger;
+    border-radius: 5px;
+    border: none;
+}
+#container{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: auto;
+}
+image{
+    border: radius 10px;
+    
+}
