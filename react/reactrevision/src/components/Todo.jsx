@@ -2,8 +2,9 @@ import { useState } from "react";
 
 export const Todo = () => {
   const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState();
-  const [date, setDate] = useState();
+  const [amount, setAmount] = useState("");
+  const [date, setDate] = useState("");
+  const [arr,setArr]=useState([])
   const changeTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -17,20 +18,24 @@ export const Todo = () => {
   const submitForm = (e) => {
     e.preventDefault();
     // making the data in object format
-    const expensedata={
+    let arr1={
         title:title,
         amount:amount,
         date:new Date(date)//using new Date inbuilt to change date in date format
-    }
-    console.log(expensedata);
+      }
+    console.log(arr1);
     //setting inputs blank after done
     setTitle('')
     setAmount('')
     setDate('')
+    setArr(...arr,arr1)
   };
+  // const handledata=()=>{
+  //   setArr(...arr,title,amount,date)
+  // }
   return (
     <div>
-      <h1></h1>
+      <h1>learning</h1>
       <form onSubmit={submitForm}>
         <div>
           <div>
@@ -44,6 +49,7 @@ export const Todo = () => {
             />
           </div>
           <div>
+
             <label>amount</label>
             <input
               type="number"
@@ -63,9 +69,25 @@ export const Todo = () => {
           </div>
         </div>
         <div>
-          <button type="submit">add expense</button>
+          <button type="submit" >add expense</button>
         </div>
-      </form>
+        
+      
+        </form>
+      {
+        arr1.forEach((e)=>{
+          return(
+        <div>
+        <div>{e.title}</div>
+          <div>{e.amount}</div>
+          <div>{e.date}</div>
+          </div>)})
+}
+
+      
+      
+      
+
     </div>
   );
 };
