@@ -21,10 +21,11 @@ function runProgram(input) {
 }
 if (process.env.USERNAME === "My") {
   runProgram(`4
-    E 2
-    E 3
     D
     D
+    D
+    D
+    E 4
     D`);
 } else {
   process.stdin.resume();
