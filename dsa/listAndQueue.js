@@ -1,9 +1,29 @@
 function runProgram(input) {
     // console.log(process.env.USERNAME);
     var ni=input.split("\n")
-    console.log(ni);
+    // console.log(ni);
+    var ans=[]
+    for(var k=1;k<ni.length;k++){
+       
+        var data=ni[k].trim().split(" ")
+        
+            
+            // console.log(data[i]);
+            if(data[0]=='Push'){
+                ans.push(data[1])
+                // console.log(ans);
+            }
+            
+            else if(data[0]=='Pop'){
+                ans.shift()
+                // console.log(ans);
+            }
+            
+        }
+        console.log(ans.join("\n"));
+    }
     
-  }
+  
   if (process.env.USERNAME === "My") {
     runProgram(`3
     Push 4
@@ -25,6 +45,6 @@ function runProgram(input) {
       read = read.replace(/\n$/, "");
       runProgram(read);
       process.exit(0);
-    });
+    }); 
   }
   
