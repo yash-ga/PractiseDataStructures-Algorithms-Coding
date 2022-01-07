@@ -18,21 +18,19 @@ export const Todo = () => {
   const submitForm = (e) => {
     e.preventDefault();
     // making the data in object format
-    let arr1={
-        title:title,
-        amount:amount,
-        date:new Date(date)//using new Date inbuilt to change date in date format
-      }
-    console.log(arr1);
+    // let arr1=[
+    //     title:title,
+    //     amount:amount,
+    //     date:new Date(date)//using new Date inbuilt to change date in date format
+    // ]
+    // console.log(arr1);
     //setting inputs blank after done
     setTitle('')
     setAmount('')
     setDate('')
-    setArr(...arr,arr1)
+    setArr([...arr,title,amount,date])
   };
-  // const handledata=()=>{
-  //   setArr(...arr,title,amount,date)
-  // }
+  
   return (
     <div>
       <h1>learning</h1>
@@ -75,9 +73,10 @@ export const Todo = () => {
       
         </form>
       {
-        arr1.forEach((e)=>{
+        arr.map((e)=>{
           return(
         <div>
+          <div>{e}</div>
         <div>{e.title}</div>
           <div>{e.amount}</div>
           <div>{e.date}</div>
@@ -91,3 +90,4 @@ export const Todo = () => {
     </div>
   );
 };
+

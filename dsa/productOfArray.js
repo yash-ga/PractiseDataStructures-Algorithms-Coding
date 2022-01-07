@@ -1,13 +1,33 @@
 function runProgram(input) {
     // console.log(process.env.USERNAME);
     var ni=input.split("\n")
-    console.log(ni);
-    
+    // console.log(ni);
+    for(var k=2;k<ni.length;k=k+2){
+        var arr=ni[k].trim().split(" ").map(Number)
+        // console.log(arr);
+        var product=[]
+        product.length=arr.length
+        // console.log(product.length);
+        var temp=1
+        for(var i=0;i<arr.length;i++){
+            product[i]=temp
+            temp=temp*arr[i]
+        }
+        temp=1
+        for(var i=arr.length-1;i>=0;i--){
+            product[i]=product[i]*temp
+            temp=temp*arr[i]
+        }
+        console.log(product);
+        
+    }
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`6
-    1 1 1 2 2 2	
-    1`);
+    runProgram(`2
+    5
+    1 2 3 4 5
+    3
+    3 2 7`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -26,4 +46,5 @@ function runProgram(input) {
       process.exit(0);
     });
   }
+
   
