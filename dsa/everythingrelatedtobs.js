@@ -7,8 +7,14 @@ function runProgram(input) {
     var k=Number(ni[2])
     
     // console.log(k);
-    console.log(upperbound(data,k))
-    console.log(lowerbound(data,k))
+    var u=(upperbound(data,k))
+    console.log(u);
+    var l=(lowerbound(data,k))
+    var f=l-u+1
+    var res="";
+    res=res+u+" "+l+" "+f;
+    console.log(res);
+
 
   }
   function upperbound(data,k){
@@ -16,9 +22,13 @@ function runProgram(input) {
       while(low<=high){
         var middle=Math.floor(low+(high-low)/2)
         // console.log(middle);
-          if(data[middle]>k){
+          if(data[middle]==k){
             ans=middle
             high=middle-1
+          }
+          else if(data[middle]>k){
+            high=middle-1
+
           }
           else{
               low=middle+1
@@ -32,12 +42,16 @@ function runProgram(input) {
     while(low<=high){
       var middle=Math.floor(low+(high-low)/2)
       // console.log(middle);
-        if(data[middle]<=k){
+        if(data[middle]==k){
           ans=middle
           low=middle+1
         }
-        else{
+        else if(data[middle]>k){
           high=middle-1
+        }
+        else{
+          low=middle+1
+          // high=middle-1
         }
       }
       return ans
