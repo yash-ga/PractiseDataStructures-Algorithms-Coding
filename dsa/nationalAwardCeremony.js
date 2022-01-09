@@ -4,17 +4,19 @@ function runProgram(input) {
     // console.log(ni);
     for(var k=2;k<ni.length;k=k+2){
         var data=ni[k].trim().split(" ").map(Number)
-        // console.log(data);
-        for(var i=0;i<data.length;i++){
-            for(var j=0;j<data.length-i;j++){
-                if(data[j]>data[j+1]){
-                    var temp=data[j]
-                    data[j]=data[j+1]
-                    data[j+1]=temp
-                }
-            }
+        console.log(data);
+        var l=0;h=l+1;
+        while(l<h){
+          if(data[l]>data[h]){
+            var temp=data[l]
+            data[l]=data[h]
+            data[h]=temp
+            l++
+          }
         }
-        console.log(data.join(' '));
+        console.log(data);
+        
+        
     }
     
   }

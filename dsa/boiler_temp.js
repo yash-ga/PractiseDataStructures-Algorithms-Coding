@@ -5,13 +5,7 @@ function runProgram(input) {
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`3
-    1
-    2
-    3
-    2 0 1
-    4
-    2 0 2 1`);
+    runProgram(``);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
