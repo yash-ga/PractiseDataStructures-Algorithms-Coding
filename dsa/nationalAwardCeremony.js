@@ -3,18 +3,40 @@ function runProgram(input) {
     var ni=input.split("\n")
     // console.log(ni);
     for(var k=2;k<ni.length;k=k+2){
-        var data=ni[k].trim().split(" ").map(Number)
-        console.log(data);
-        var l=0;h=l+1;
-        while(l<h){
-          if(data[l]>data[h]){
-            var temp=data[l]
-            data[l]=data[h]
-            data[h]=temp
-            l++
-          }
-        }
-        console.log(data);
+        var arr=ni[k].trim().split(" ").map(Number)
+        console.log(arr);
+        
+// var arr=[2,5,2,1]
+// console.log(arr);
+var N=arr.length
+
+for (var i = 0; i < N;i++) {
+ 
+  // If the current element is
+  // at correct position
+  if (arr[i] == i + 1) {////
+      continue;
+  }
+
+  // Else swap the current element
+  // with it's correct position
+  else {
+      var temp1 = arr[i];//0
+     var temp2 = arr[Math.abs(arr[i] - 1)];//
+     arr[i] = temp2;//2
+     arr[temp1 - 1] = temp1;//1
+  }
+}
+var res=arr.join(" ")
+console.log(res);
+if(res[N-1]==0){
+  var b=arr.pop()
+  console.log(b);
+}
+var a=[]
+a.push(b)
+a.push(res)
+console.log(a.join(" "));
         
         
     }
@@ -47,3 +69,4 @@ function runProgram(input) {
     });
   }
   
+
