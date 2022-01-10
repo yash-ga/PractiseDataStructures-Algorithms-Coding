@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whetherapp</title>
+</head>
+<body>
+    <h1>Whether App</h1>
+    <input type="text" placeholder="search city" id="input"/>  
+    <div id="div"></div> 
+    <button id="btn" onClick="whether()">cllick</button>
+
+</body>
+</html>
+<script>
+    // var input=document.getElementById('input').value
+    // var div=document.getElementById('div')
+    // div.innerHTML=input
+    async function whether(){
+        var res=await fetch("https://openweathermap.org/api")
+        var data=await res.json()
+        console.log(data);
+        
+        
+    }
+</script>
