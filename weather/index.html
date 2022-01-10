@@ -14,13 +14,26 @@
 </body>
 </html>
 <script>
-    // var input=document.getElementById('input').value
-    // var div=document.getElementById('div')
-    // div.innerHTML=input
-    async function whether(){
-        var res=await fetch("https://openweathermap.org/api")
-        var data=await res.json()
-        console.log(data);
+    
+    //c1ce763099a6ab1f41b56164d7c7732f
+    //api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    async function whether(inpu){
+        var inpu=document.getElementById('input').value
+        try{
+
+            var res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inpu}&appid=c1ce763099a6ab1f41b56164d7c7732f`)
+            var data=await res.json()
+            console.log(data.main);
+            var show=document.getElementById('div')
+            show.innerText=`temp-${data.main.temp-250+"*C"}
+            temp_min-${data.main.temp_min-250+"*C"}
+            temp_max-${data.main.temp_max-250+"*C"}
+            humidity-${data.main.humidity-50+"*C"}
+            `
+        }
+        catch(err){
+            console.log('err=',err);
+        }
         
         
     }
