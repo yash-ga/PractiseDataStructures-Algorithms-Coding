@@ -8,10 +8,13 @@ function runProgram(input) {
     var min=maxpro
     for(var i=0;i<data.length;i++){
         if(data[i]>min){
+          // console.log(data[i]);
+          min=data[i]
             maxpro=data[i]-min
+            // console.log(maxpro);
         }
-    }
-    console.log(maxpro);
+      }
+      console.log(maxpro);
     
   }
   if (process.env.USERNAME === "My") {
