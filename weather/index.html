@@ -9,7 +9,7 @@
     <h1>Whether App</h1>
     <input type="text" placeholder="search city" id="input"/>  
     <div id="div"></div> 
-    <button id="btn" onClick="whether()">click</button>
+    <button id="btn" onclick="whether()">click</button>
 
 </body>
 </html>
@@ -21,19 +21,80 @@
         var inpu=document.getElementById('input').value
         try{
 
-            var res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inpu}&appid=c1ce763099a6ab1f41b56164d7c7732f`)
+            var res=await fetch(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${inpu}&cnt=8`, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+                    "x-rapidapi-key": "6e9fd20d12mshbd45cec202c7455p16efeejsnc92e6d011e6d"
+                }
+            })
             var data=await res.json()
-            console.log(data.main);
-            var show=document.getElementById('div')
-            show.innerText=`temp-${data.main.temp-250+"*C"}
-            temp_min-${data.main.temp_min-250+"*C"}
-            temp_max-${data.main.temp_max-250+"*C"}
-            humidity-${data.main.humidity-50+"*C"}
-            `
+            for(var i=0;i<data.list.length;i++){
+                console.log(data.list[i].dt);
+                function convert(t) {
+  // console.log(t)
+  const dt = new Date(t);
+  const hr = dt.getUTCHours();
+  const m = "0" + dt.getUTCMinutes();
+  if(hr<12){
+    return hr + ':' + m.substr(-2) +"AM"
+  }
+  else {
+    return hr + ':' + m.substr(-2)+"PM"
+  }
+  
+}
+
+                var date=new Date(+data.list[i].dt).toUTCString()
+                console.log(date);
+                var date1=convert(+date)
+                console.log(date1);
+                
+                var data_div=document.getElementById('div')
+                data_div.innerHTML=`
+                time is-${date}
+                sky is-${data.list[i+0].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+1].weather[0].main} 
+                time is-${date}
+                sky is-${data.list[i+2].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+3].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+4].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+5].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+6].weather[0].main}
+                time is-${date}
+                sky is-${data.list[i+7].weather[0].main}
+                `
+
+            }
+
         }
         catch(err){
-            console.log('err=',err);
+
+            console.error(err);
         }
+
+
+        // try{
+
+        //     var res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inpu}&appid=c1ce763099a6ab1f41b56164d7c7732f`)
+        //     // var res=await fetch(`https://pro.openweathermap.org/data/2.5/forecast/climate?q=${inpu}&cnt=8&appid=6eff592851c679fca620280ea6960eb4`)
+        //     var data=await res.json()
+        //     console.log(data);
+            // var show=document.getElementById('div')
+            // show.innerText=`temp-${data.main.temp-250+"*C"}
+            // temp_min-${data.main.temp_min-250+"*C"}
+            // temp_max-${data.main.temp_max-250+"*C"}
+            // humidity-${data.main.humidity-50+"*C"}
+            // `
+        // }
+        // catch(err){
+        //     console.log('err=',err);
+        // }
         
         
     }
