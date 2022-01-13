@@ -5,6 +5,16 @@ function runProgram(input) {
     for(var k=2;k<ni.length;k=k+2){
         var data=ni[k].trim().split(" ").map(Number)
         console.log(data);
+        var n=data.length
+        for(var i=0;i<data.length;i++){
+            if(data[i]<data[i+1]){
+                continue
+            }
+            else{
+                console.log(i);
+                break
+            }
+        }
     }
     
   }

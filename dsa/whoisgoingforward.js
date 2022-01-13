@@ -4,22 +4,32 @@ function runProgram(input) {
     // console.log(ni);
     var nums=ni[0].trim().split(" ").map(Number)
     var k=Number(nums[1])
-    // console.log(k);
+    console.log(k);
     var data=ni[1].trim().split(" ").map(Number)
     // console.log(data);
-    for(var i=k+1;i<data.length;i++){
+    var count=0;
+    for(var i=0;i<data.length;i++){
         // console.log(data[i]);
         // console.log(data[k]);
-        if(data[i]>=data[k]){
-            console.log(i);
-            break;
+        if(data.length==1){
+          count=1
         }
-    }
+        // console.log(data[k]);
+         if(data[k]==0){
+          count=0;
+        }
+        if(data[i]>=data[k]&&data[i]!=0){
+          count++;
+            // console.log(count);
+            // break;
+        }
+      }
+      console.log(count);
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`8 4
-    10 9 8 7 7 7 5 5`);
+    runProgram(`17 14
+    16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
