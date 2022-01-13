@@ -1,11 +1,10 @@
 function runProgram(input) {
-    // console.log(process.env.USERNAME);
-    var ni=input.split("\n")
-    console.log(ni);
+   
+
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`aaabccddd`);
+    runProgram(``);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
