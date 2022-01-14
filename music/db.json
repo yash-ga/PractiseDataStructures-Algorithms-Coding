@@ -1,0 +1,17 @@
+{
+    "artist":{
+        "raftar":[{
+            "genre":"hipohp",
+            "songs":[1,2,3],
+            "img_link":"url",
+            "year":2021
+
+        },{
+            "genre":"hipohp",
+            "songs":[1,2,3],
+            "link":"url"
+        }
+    ]
+    }
+    
+}
