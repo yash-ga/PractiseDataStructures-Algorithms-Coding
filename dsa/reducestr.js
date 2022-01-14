@@ -10,7 +10,7 @@ function runProgram(input) {
             i=i+1
         }
         else{
-            ans=ans+data[i]
+            ans.push(data[i])
         }
     }
     // console.log(ans);
