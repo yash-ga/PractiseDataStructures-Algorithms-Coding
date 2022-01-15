@@ -1,5 +1,5 @@
 {
-    "artist":{
+    "artist":[{
         "raftar":[{
             "genre":"hipohp",
             "songs":[1,2,3],
@@ -12,6 +12,7 @@
             "link":"url"
         }
     ]
-    }
+    
+    }]
     
 }
