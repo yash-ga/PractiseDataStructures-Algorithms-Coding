@@ -14,7 +14,7 @@ function min(arr,n){
         else if(arr[mid]<arr[mid-1]){
             return mid
         }
-        else if(arr[low]<arr[mid]){
+        else if(arr[low]<=arr[mid]){
             low=mid+1
         }
         else{
