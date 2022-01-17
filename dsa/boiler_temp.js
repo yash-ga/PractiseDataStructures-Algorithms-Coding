@@ -1,20 +1,11 @@
 function runProgram(input) {
    var ni=input.split("\n")
-  //  console.log(ni);
-   var data=ni[1].trim().split(" ").map(Number)
-  //  console.log(data);
-   var min=data[0]
-   for(var i=0;i<data.length;i++){
-     if(data[i]<min){
-       min=data[i]
-     }
-   }
-console.log(min);
+   console.log(ni);
+   
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`10
-    4 6 7 9 10 -1 0 1 2 3`);
+    runProgram(``);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
