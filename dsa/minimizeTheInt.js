@@ -1,23 +1,38 @@
 function runProgram(input) {
     var ni=input.split("\n")
-    console.log(ni);
+    // console.log(ni);
     for(var k=1;k<ni.length;k++){
-        var data=ni[k].trim().split(" ")
-        console.log(data);
-        data.sort(function(a,b){return b-a})
-        console.log(data.sort());
-        if(data<0){
-            // console.log('yes');
+        var data=ni[k].trim().split("")
+        // console.log(data);
+        if(data[0]=='-'){
             data.sort(function(a,b){return b-a})
-            console.log(data);
+            console.log(data.join(""));
         }
+        else{
+            data.sort(function(a,b){return a-b})
+            // console.log(data);
+            if(data[0]<=0){
+                // console.log(data);
+                for(let i=1;i<data.length;i++){
+                    if(data[i]>0){
+                        // console.log(data[i]);
+                    var temp=data[0]
+                        data[0]=data[i]
+                        data[i]=temp
+                        break;
+                    }
+                }
+            }
+            console.log(data.join(""));
+        }
+       
     }
     
      
    }
    if (process.env.USERNAME === "My") {
      runProgram(`2
-     53334121
+     53004121
      -1002911`);
    } else {
      process.stdin.resume();
