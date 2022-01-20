@@ -4,6 +4,7 @@ function min(arr,n){
     var low=0;
     var high=n-1;
     if(arr[low]<=arr[high]){
+        //whole array is sorted
         return 0
     }
     while(low<high){
