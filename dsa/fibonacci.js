@@ -1,31 +1,22 @@
 function runProgram(input) {
-    var ni=input.split("\n")
-    console.log(ni);
-    for(var k=2;k<ni.length;k=k+4){
-        var n=ni[k].trim().split(" ").map(Number)
-        console.log(n);
-        var m=ni[k+2].trim().split(" ").map(Number)
-        console.log(m);
-        var a=[...n,...m]
-        console.log(a);
-        for(var i=0;i<n;i++){
-            // for(var )s
-
-        }
+    // var ni=input.split("\n")
+    // console.log(ni);
+    var n=Number(input)
+    // console.log(n);
+    console.log(fibonacci(n));
     }
-    
-     
-   }
+    function fibonacci(n){
+        if(n==0){
+            return 0
+        }
+        if(n==1||n==2){
+            return 1
+        }
+
+        return fibonacci(n-1)+fibonacci(n-2)
+    }
    if (process.env.USERNAME === "My") {
-     runProgram(`2
-     6
-     1 2 3 4 5 6
-     3
-     3 3 5
-     4 
-     1 2 3 4
-     4 
-     5 6 7 8`);
+     runProgram(`4`);
    } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");

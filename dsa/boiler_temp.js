@@ -2,10 +2,15 @@ function runProgram(input) {
    var ni=input.split("\n")
    console.log(ni);
    
+   
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(``);
+    runProgram(`2
+    3
+    60 60 60
+    5
+    30 30 10 20 400`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
