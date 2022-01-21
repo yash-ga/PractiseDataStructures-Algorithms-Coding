@@ -6,7 +6,7 @@ function runProgram(input) {
         var q=ni[k].trim().split(" ").map(Number)
         var r=Number(q[1])
         
-        console.log(r);
+        // console.log(r);
         var data=ni[k+1].trim().split(" ").map(Number)
         // console.log(q);
         r=r%data.length
