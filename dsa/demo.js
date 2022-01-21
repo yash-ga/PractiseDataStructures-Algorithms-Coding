@@ -25,11 +25,15 @@
   
  
 //   console.log( add(3)(4)(1));
-{
-    var x=9
-    console.log(x);
+// {
+// //     var x=9
+// //     console.log(x);
+// // }
+// function a(v,b){
+// console.log(v+b);
+// }
+// a(3,4)
+var arr=[1,2,2,3]
+if(Array.isArray(arr)==true){
+    console.log('yes');
 }
-function a(v,b){
-console.log(v+b);
-}
-a(3,4)

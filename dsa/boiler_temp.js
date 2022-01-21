@@ -6,11 +6,7 @@ function runProgram(input) {
     
   }
   if (process.env.USERNAME === "My") {
-    runProgram(`2
-    3
-    60 60 60
-    5
-    30 30 10 20 400`);
+    runProgram(``);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
