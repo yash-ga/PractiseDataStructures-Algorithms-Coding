@@ -11,23 +11,27 @@ function runProgram(input) {
     var max=1;
     var max2=1;
     for(var i=0;i<data.length;i++){
-        if(data[i]>max){
+        if(data[i]>data[max]){
             max=i
         }
     }
-    console.log(max);
+    // console.log(max);
     for(var j=0;j<data.length;j++){
-        if(data[j]>max2&&j!=max){
+        if(data[j]>data[max2]&&j!=max){
             max2=j
         }
     }
-    console.log(max2);
+    // console.log(max2);
     console.log(data[max]*data[max2]);
 }
 if (process.env.USERNAME === "My") {
   runProgram(`3
      6 
-     9 7 8 9 `);
+     9 7 8 9 
+     5
+     1 2 3 5 5
+     2
+     0 0`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
