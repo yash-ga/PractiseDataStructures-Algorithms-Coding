@@ -33,7 +33,11 @@
 // console.log(v+b);
 // }
 // a(3,4)
-var arr=[1,2,2,3]
-if(Array.isArray(arr)==true){
-    console.log('yes');
-}
+// var arr=[1,2,2,3]
+// if(Array.isArray(arr)==true){
+//     console.log('yes');
+// }
+// var arr=[0, 1, 2, [[[3, 4]]]]
+// console.log(arr.flat());
+
+console.log(36%60);

@@ -15,6 +15,7 @@ while(l<h){
         h--
     }
     else if(arr[l]+arr[h]<k){
+        // ans=arr[l]+arr[h]
 
         l++
     }
