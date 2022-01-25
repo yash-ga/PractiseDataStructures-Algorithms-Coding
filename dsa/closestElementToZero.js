@@ -1,8 +1,8 @@
 function runProgram(input) {
     var ni=input.split("\n")
-    console.log(ni);
+    // console.log(ni);
     let data=ni[1].trim().split(" ").map(Number)
-    console.log(data);
+    // console.log(data);
     let count=0;
     for(var i=0;i<data.length;i++){
 
@@ -18,6 +18,7 @@ function runProgram(input) {
         console.log(max);
         for(var j=0;j<data.length;j++){
             if(data[j]<0){
+                // -99 -50
 
                 if(data[j]>max){
                     max=data[j]
