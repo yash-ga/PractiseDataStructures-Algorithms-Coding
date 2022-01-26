@@ -46,3 +46,37 @@
 
 // arrival=[9,     9.40, 11.00,18,20]
 // departue=[10.10,12.00,19,      21]
+// let yash="push"
+// let yash="ranu"
+// var yash;
+// console.log(yash);
+// let x='fog'
+// function first(){
+//     console.log(x);
+// }
+// function second(){
+//     let x='log'
+//     first()
+// }
+// x='dog';
+// second()
+// const x=4
+// const y=4
+// const sum=x+y
+// console.log(sum);
+let arr=[1,2,[5,4,3,[6,7,8]]]
+let res=[]
+function flatten(arr,res){
+    for(let i=0;i<arr.length;i++){
+        if(typeof arr[i]!=="number"){
+            console.log(arr[i]);
+            flatten(arr[i],res)
+        }
+        else{
+            console.log(arr[i]);
+            res.push(arr[i])
+        }
+    }
+}
+flatten(arr,res)
+console.log(res);

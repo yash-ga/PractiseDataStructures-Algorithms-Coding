@@ -49,7 +49,7 @@
 // }
 let arr=[1,2,0,3]
 let N=arr.length
-function eq(arr,N){
+// function eq(arr,N){
   for(let i=0;i<N;i++){
     let leftsum=0;
     for(let j=0;j<i;j++){
@@ -60,9 +60,10 @@ function eq(arr,N){
       rightsum=rightsum+arr[j]
     }
     if(leftsum==rightsum&&i!=0||i!=N){
-      return i+1
+    //   return i+1
+      console.log(i+1);
     }
   }
   return -1
-}
+// }
 console.log(eq(arr,N));
