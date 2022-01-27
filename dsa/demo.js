@@ -64,19 +64,53 @@
 // const y=4
 // const sum=x+y
 // console.log(sum);
-let arr=[1,2,[5,4,3,[6,7,8]]]
-let res=[]
-function flatten(arr,res){
-    for(let i=0;i<arr.length;i++){
-        if(typeof arr[i]!=="number"){
-            console.log(arr[i]);
-            flatten(arr[i],res)
-        }
-        else{
-            console.log(arr[i]);
-            res.push(arr[i])
-        }
-    }
-}
-flatten(arr,res)
-console.log(res);
+// let arr=[1,2,[5,4,3,[6,7,8]]]
+// let res=[]
+// function flatten(arr,res){
+//     for(let i=0;i<arr.length;i++){
+//         if(typeof arr[i]!=="number"){
+//             console.log(arr[i]);
+//             flatten(arr[i],res)
+//         }
+//         else{
+//             console.log(arr[i]);
+//             res.push(arr[i])
+//         }
+//     }
+// }
+// flatten(arr,res)
+// console.log(res);
+const bark= {
+    // var animal='dog'
+    // return animal
+    // return('Woof!');
+  }
+  
+//   bark.animal = 'dog';
+//   console.log(bark());
+
+// bark.a="cy"
+// bark.b="cz"
+// bark.c="ca"
+// console.log(bark.length);
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     return firstName+ lastName
+//   }
+  
+//   const lydia = new Person('Lydia', 'Hallie');
+//   const sarah =  Person('Sarah', 'Smith');
+  
+//   console.log(lydia);
+//   console.log(sarah);
+function getPersonInfo(one, two, three) {
+    console.log(one);
+    console.log(two);
+    console.log(three);
+  }
+  
+  const person = 'Lydia';
+  const age = 21;
+  
+  getPersonInfo`${person} is ${age} years old`;
