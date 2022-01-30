@@ -1,18 +1,18 @@
 function runProgram(input) {
     var ni=input.split("\n")
-    console.log(ni);
+    
     let a=ni[1].trim().split(" ").map(Number)
-    console.log(a);
+ 
     let l= 0;let r=a.length-1
 
 console.log(mergeSort(a,l,r));
-// console.log((merge(a,l,r,(l+r)/2)));
+
 
     
 }
 function mergeSort(a,l,r){
     if(l<r){
-        let mid=Math.floor((r+l)/2)
+        let mid=Math.floor(l+(r-l)/2)
         mergeSort(a,l,mid)
         mergeSort(a,mid+1,r)
         merge(a,l,mid,r)
@@ -47,12 +47,12 @@ else{
         i++;
     }
 }
-// return b
+
 for(let k=l;k<=r;k++){
     a[k]=b[k]
 }
-// return a
 }
+
     
      
    if (process.env.USERNAME === "My") {

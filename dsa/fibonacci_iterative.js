@@ -6,7 +6,7 @@ function runProgram(input) {
     console.log(fibonacci(n));
     }
     function fibonacci(n){
-        var seq=[0,1]
+        var seq=[0,1,1,2,3,5]
         for(var i=2;i<=n;i++){
             seq.push(seq[i-1]+seq[i-2])
         }
@@ -14,7 +14,7 @@ function runProgram(input) {
         
     }
    if (process.env.USERNAME === "My") {
-     runProgram(`4`);
+     runProgram(`5`);
    } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");

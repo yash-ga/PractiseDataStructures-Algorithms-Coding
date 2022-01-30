@@ -104,13 +104,74 @@ const bark= {
   
 //   console.log(lydia);
 //   console.log(sarah);
-function getPersonInfo(one, two, three) {
-    console.log(one);
-    console.log(two);
-    console.log(three);
-  }
+// function getPersonInfo(one, two, three) {
+//     console.log(one);
+//     console.log(two);
+//     console.log(three);
+//   }
   
-  const person = 'Lydia';
-  const age = 21;
+//   const person = 'Lydia';
+//   const age = 21;
   
-  getPersonInfo`${person} is ${age} years old`;
+//   getPersonInfo`${person} is ${age} years old`;
+// let n=undefined+1
+// console.log(n);
+// let n=parseInt("123xyz")
+// console.log(n);
+// let x=2.1
+// const y=3.8
+// function sum(x,y){
+//   return x+y+0.1
+// }
+// console.log(sum(x,y));
+// function x(a,b,c){
+
+// }
+// let x=15
+// let i=0;
+// while(x%2==0){
+//   i++
+//   x-=2
+//   if(x==9){
+//     break;
+//   }
+// }
+// console.log(i);
+// function pat(n){
+
+// }
+// function largestPrimeFactor(number) {
+//   if(number==2 || number==3){
+//     return number;
+//   }
+//   var i,j,num,prime;
+//   for(i=4;i<=number;i++){
+//     num=1;
+//     //checking it is a prime number or not
+//     if(i%2!=0){var m=i/2;
+//     for(j=2;j<=m;j++){
+//       if(i%j==0){
+//         num=0;
+//         break;
+//         }
+//     }}
+//   if(num==1 && number%i==0){
+//       prime=i;
+//   }
+// }
+// }
+// console.log(largestPrimeFactor(79));
+// let data=[1,2,3,4,5]
+// for(var i=0;i<5;i++){
+//   if(data[i]==1){
+
+//     delete data[i].trim()
+//   }
+// }
+// console.log(data);
+const numbers = [1, 2, 3, 4, 5];
+const [y,z] = numbers;
+
+console.log(y,z);
+
+

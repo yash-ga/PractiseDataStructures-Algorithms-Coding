@@ -1,23 +1,24 @@
 function runProgram(input) {
-    // var ni=input.split("\n")
-    // console.log(ni);
-    var n=Number(input)
-    // console.log(n);
-    console.log(fibonacci(n));
+    
+    let n=Number(input)
+    console.log(factorial(n));
+}
+//5*4*3*2*1=120
+function factorial(n){
+    // if(n==0||n==1)return 1;
+    // return n*factorial(n-1)
+    let prod=1;
+    for(let i=1;i<=n;i++){
+        prod=prod*i
     }
-    //0 1 1 2 3 5 8 13 .......
-    function fibonacci(n){
-        if(n==0){
-            return 0
-        }
-        if(n==1||n==2){
-            return 1
-        }
+    return prod
+}
 
-        return fibonacci(n-1)+fibonacci(n-2)//3+2=2+1=3
-    }
+    
+    
+     
    if (process.env.USERNAME === "My") {
-     runProgram(`4`);
+     runProgram(`5`);
    } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");

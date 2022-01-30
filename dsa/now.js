@@ -1,23 +1,20 @@
 function runProgram(input) {
-    // var ni=input.split("\n")
-    // console.log(ni);
-    var n=Number(input)
-    // console.log(n);
-    console.log(fibonacci(n));
-    }
-    //0 1 1 2 3 5 8 13 .......
-    function fibonacci(n){
-        if(n==0){
-            return 0
-        }
-        if(n==1||n==2){
-            return 1
-        }
+    let n=Number(input)
+    console.log(now(n));
+}
+function now(n){
+    if(n<0)return 0
+        
+    if(n==0)return 1
+    
+    return now(n-5)+now(n-3)+now(n-1)
+}
 
-        return fibonacci(n-1)+fibonacci(n-2)//3+2=2+1=3
-    }
+    
+    
+     
    if (process.env.USERNAME === "My") {
-     runProgram(`4`);
+     runProgram(`10`);
    } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");
