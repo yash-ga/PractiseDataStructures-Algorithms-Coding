@@ -1,4 +1,4 @@
-let screen=document.getElementById("screen")
+let screen =document.getElementById("screen")
 var buttons=document.querySelectorAll("button")
 let screenText=""
 
@@ -21,7 +21,7 @@ for(items of buttons){
             screen.value=screenText
         }
         else{
-            screenText=screenText+buttonText//'9+9
+            screenText=screenText+buttonText
             screen.value=screenText
         }
     })

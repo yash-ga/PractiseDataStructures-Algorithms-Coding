@@ -1,17 +1,25 @@
 function runProgram(input) {
     var ni=input.split("\n")
-    console.log(ni);
+    // console.log(ni);
     
     let data=ni[1].trim().split(" ").map(Number)
-    console.log(data);
-    console.log(sorted(data));
+    // console.log(data);
+    let a=(sorted(data));
+    console.log(a);
+    if(a==-1){
+        console.log('No');
+
+    }
+    else{
+        console.log('Yes');
+    }
 
      
    }
    function sorted(data){
        let low=0;let high=data.length-1;let ans=-1
-       let mid=Math.floor(low+(high-low)/2)
        while(low<=high){
+           let mid=Math.floor(low+(high-low)/2)
            if(data[mid]<data[mid-1]){//9<7
             ans=mid
            }
