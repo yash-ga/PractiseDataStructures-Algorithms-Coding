@@ -7,14 +7,14 @@ function runProgram(input) {
         detectPalin(data)
 }
 }
-        function detectPalin(data){
+        function detectPalin(N,string){
             var obj={}
-            for(var i=0;i<data.length;i++){
-                if(obj[data[i]]=obj[data[i]]){
-                    obj[data[i]]=obj[data[i]]+1
+            for(var i=0;i<N;i++){
+                if(obj[string[i]]=obj[string[i]]){
+                    obj[string[i]]=obj[string[i]]+1
                 }
                 else{
-                    obj[data[i]]=1
+                    obj[string[i]]=1
                 }
             }
             var count=0;
