@@ -2,25 +2,27 @@ function runProgram(input) {
     var ni=input.split("\n")
     // console.log(ni);
     let data=ni[1].trim().split(" ").sort(function(a,b){return a-b}).map(Number)
-    // console.log(data);  
-    let l=data[0]
-    let r=data[data.length-1]
-    // console.log(l,r);
+    
+  
     for(let k=3;k<ni.length;k++){
         let queries=ni[k].trim().split(" ").map(Number)
-        // console.log(queries);
+        
         let q1=Number(queries[0])
         let q2=Number(queries[1])
-        // console.log(q1,q2);
+        console.log(find(data,q1,q2));
+    }
+    function find(data,q1,q2){
+       
         let count=0;
         for(let i=0;i<data.length;i++){
+            var res=""
             if(data[i]>=q1&&data[i]<=q2){
                 count++
             }
+            res=res+count
         }
-        let res=""
-        res=res+count+""
-        console.log(res);
+        return (res);
+        
     }  
     
      
