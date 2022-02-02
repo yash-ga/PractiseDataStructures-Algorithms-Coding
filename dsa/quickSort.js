@@ -10,21 +10,21 @@ function quickSort(arr, low, high) {
   }
   
   function partition(arr, low, high) {
-    let pivot = arr[high];
+    let pivot = arr[high];//3
     let i = low - 1;
   
     for (let j = low; j < high; j++) {
-      if (arr[j] < pivot) {
+      if (arr[j] < pivot) {//2<6 no
           i++;
         let temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
       }
     }
-    i++;
-    let temp = arr[i];
-    arr[i] = arr[high];
-    arr[high] = temp;
+    i++;//0
+    let temp = arr[i];//6
+    arr[i] = arr[high];//5
+    arr[high] = temp;//6
     return i;
   }
   
