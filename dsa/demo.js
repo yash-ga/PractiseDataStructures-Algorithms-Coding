@@ -169,9 +169,54 @@ const bark= {
 //   }
 // }
 // console.log(data);
-const numbers = [1, 2, 3, 4, 5];
-const [y,z] = numbers;
+// const numbers = [1, 2, 3, 4, 5];
+// const [y,z] = numbers;
 
-console.log(y,z);
+// console.log(y,z);
+// function outer(){
+//   let a=10;
+//   return function inner(){
+//     console.log(a);
+//   }
+ 
+// }
+// let z=outer()
+// console.log(z);
+// z()
+// let arr=[1,2,3,4,5]
+// arr.forEach((e)=>{
+// console.log(e);
+// })
+// let a=function(ac,cur){
+//   return(ac+cur);
+// }
+// console.log(arr.reduce(a))
+// let b=arr.filter(function(e){
+//   if(e==1){
+//     return e
+//   }
+// })
+// console.log(b);
+// let x=true;
+// let a=new Promise((res,rej)=>{
+// if(x){
+//   res('x is present')
+// }
+// else{
+//   rej('x is not here')
+// }
+// })
+// console.log(a);
+const count = false;
+
+let countValue = new Promise(function (resolve, reject) {
+    if (count) {
+        resolve("There is a count value.");
+    } else {
+        reject("There is no count value");
+    }
+});
+
+console.log(countValue);
 
 

@@ -1,7 +1,7 @@
 function runProgram(input) {
     var ni=input.split("\n")
-    // console.log(ni);
-    let data=ni[1].trim().split(" ").sort(function(a,b){return a-b}).map(Number)
+    
+    let data=ni[1].trim().split(" ").map(Number)
     
   
     for(let k=3;k<ni.length;k++){
@@ -15,13 +15,13 @@ function runProgram(input) {
        
         let count=0;
         for(let i=0;i<data.length;i++){
-            var res=""
+          
             if(data[i]>=q1&&data[i]<=q2){
                 count++
             }
-            res=res+count
+            
         }
-        return (res);
+        return (count);
         
     }  
     
