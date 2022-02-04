@@ -41,7 +41,7 @@ function runProgram(input) {
     var low=0;high=data.length-1;ans=-1
     while(low<=high){
       var middle=Math.floor(low+(high-low)/2)
-      // console.log(middle);
+      
         if(data[middle]==k){
           ans=middle
           low=middle+1
@@ -51,7 +51,6 @@ function runProgram(input) {
         }
         else{
           low=middle+1
-          // high=middle-1
         }
       }
       return ans

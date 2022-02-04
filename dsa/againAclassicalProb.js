@@ -11,6 +11,7 @@ function runProgram(input) {
     
      
    }
+   //()[]
    function bracket(data){
        let low=0;
        let high=data.length-1

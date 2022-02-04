@@ -4,7 +4,8 @@ function runProgram(input) {
     for(var k=2;k<ni.length;k=k+2){
         var data=ni[k].trim().split("")
         // console.log(data);
-        detectPalin(data)
+        let N=data.length
+        detectPalin(N,data)
 }
 }
         function detectPalin(N,string){
@@ -17,20 +18,22 @@ function runProgram(input) {
                     obj[string[i]]=1
                 }
             }
-            var count=0;
+            let count=0;
+            // console.log(obj);
             for(key in obj){
 
                 // console.log(`${key}-${obj[key]}`);
+                //aabdcc
                 if(obj[key]%2==1){
                     count++
                 }
             }
             // console.log(count);
                 if(count>1){
-                    console.log("Not Possible !");
+                    console.log("Not Possible!");
                 }
                 else{
-                    console.log("Possible !");
+                    console.log("Possible!");
 
                 }
 
