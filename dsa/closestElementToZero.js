@@ -4,7 +4,7 @@ function runProgram(input) {
     let data=ni[1].trim().split(" ").map(Number)
     // console.log(data);
     let count=0;
-    for(var i=0;i<data.length;i++){
+    for(var i=0;i<data.length;i++){// -50 0 50
 
         if(data[i]==0){
             count=1

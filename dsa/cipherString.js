@@ -6,13 +6,13 @@ function runProgram(input) {
         // console.log(data);
         let temp=""
         let count=1;
-        for(let i=0;i<data.length;i++){
-            if(data[i]==data[i+1]){
-                count++;
+        for(let i=0;i<data.length;i++){//
+            if(data[i]==data[i+1]){//
+                count++;//1
             }
             else{
-                temp=temp+data[i]+count
-                count=1;
+                temp=temp+data[i]+count//
+                count=1;//1
 
             }
         }
@@ -25,7 +25,7 @@ function runProgram(input) {
    if (process.env.USERNAME === "My") {
      runProgram(`2
      5
-     aabcc
+     aabcc 
      5
      aazaa`);
    } else {
