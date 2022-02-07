@@ -229,7 +229,25 @@ const bark= {
 
 // console.log(z);
 // z()
-let n=0.
-console.log(parseInt(n));
+// let n=0.
+// console.log(parseInt(n));
+// const [a,b]=
+let num=['l','b','c']
+for(x in num){
+  console.log(x);
+}
+for(x of num){
+  console.log(x);
+}
+let pets = new Set(["Cat", "Dog", "Hamster"]);
+pets["species"] = "mammals";
+
+for (let pet in pets) {
+   console.log(pet); // "species"
+}
+
+for (let pet of pets) {
+    console.log(pet); // "Cat", "Dog", "Hamster"
+}
 
 
