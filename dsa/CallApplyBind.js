@@ -18,3 +18,13 @@ bnd()
 // part1.charge
 console.log(part1);
 console.log(part2);
+
+//the best simple example to understand CAB
+function get(a,b){
+
+    console.log(100+a+b);
+}
+get.call(this,1,2)//takes arg directly
+get.apply(this,[1,2])//takes array of args
+let ans1=get.bind(this,1,2)//takes a func 
+ans1()//which can be invoked at later point of time
