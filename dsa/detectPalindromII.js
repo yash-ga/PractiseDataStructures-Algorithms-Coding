@@ -28,7 +28,7 @@ function runProgram(input) {
                     count++
                 }
             }
-            // console.log(count);
+            // console.log(count);abcba data[low]!=data[high
                 if(count>1){
                     console.log("Not Possible!");
                 }

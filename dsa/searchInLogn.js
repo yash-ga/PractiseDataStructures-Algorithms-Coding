@@ -7,7 +7,7 @@ function runProgram(input) {
     // console.log(data);
     // console.log(k);
     var low=0;
-    var high=array.length-1
+    var high=array.length-1;
     var ans=-1
     while( low <= high){
         

@@ -1,26 +1,25 @@
 function runProgram(input) {
    var ni=input.split("\n")
-   console.log(ni);
+  //  console.log(ni);
    let data=[]
-   let arr=[[]]
+   let arr=[]
    for(let k=1;k<ni.length;k++){
       data.push(ni[k].trim().split(" ").map(Number))
       
     }
-    console.log(data);
+    // console.log(data);
     for(let i=0;i<data.length;i++){
       for(let j=0;j<data[i].length;j++){
-        if(data[i][j]==0){
-          arr[i][j]==1
-        }
-        else{
-          arr[i][j]==0
-        }
+        // console.log(data[i][j]);
+        
+        if(data[i][j]==0){let zero=data[i][j];data[i][j]=1;zero=1}
+  else  if(data[i][j]==1){let one=data[i][j];data[i][j]=0;one=0;}
+        
       }
     }
-    console.log(arr);
-   
-   
+    
+    
+    console.log(data.join("\n"));
     
   }
   if (process.env.USERNAME === "My") {
