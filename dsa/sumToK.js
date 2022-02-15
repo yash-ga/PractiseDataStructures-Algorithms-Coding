@@ -1,11 +1,11 @@
 let data=[1,2,3,4,5]
 let k=6;
-let low=0;let high=data.length-1;
+let low=0;let high=data.length-1;let r=low+1;
 while(low<high){
-    if(data[low]+data[high]==k){
-        console.log(low,high);
+    if(data[low]+data[r]==k){
+        console.log(low,r);
     }
-    else if(data[low]+data[high]>k){
+    else if(data[low]+data[r]>k){
         high--;
     }
     else{
@@ -19,3 +19,4 @@ while(low<high){
 //         }
 //     }
 // }
+
