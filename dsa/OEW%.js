@@ -12,3 +12,4 @@ if(isEven(n)){
 else{
     console.log('odd');
 }
+
