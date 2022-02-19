@@ -11,7 +11,7 @@ function mergeSort(a,l,r){
     }
     return a
 }
-function merge(a,l,r){
+function merge(a,l,mid,r){
     let i=l;let j=mid+1; let k=l; let b=[]
    while(i<=mid&&j<=r){
        if(a[i]<a[j]){
@@ -43,4 +43,48 @@ function merge(a,l,r){
        a[k]=b[k]
    }
 }
+// __________practising merge sort 2
 
+let a=[5,4,3,2,1,7,8]
+let l=0;let r=a.length-1;
+console.log( ms(a,l,r));
+function ms(a,l,r){
+    if(l<r){
+        let mid=Math.floor(l+(r-l)/2)
+        ms(a,l,mid)
+        ms(a,mid+1,r)
+        merge(a,l,mid,r)
+    }
+    return a
+}
+function merge(a,l,mid,r){
+    let i=l;let j=mid+1;let k=l; let b=[];
+    while(i<=mid&&j<=r){
+      if ( a[i]<=a[j]){
+          b[k]=a[i]
+          i++;
+      }
+      else{
+          b[k]=a[j]
+          j++;
+      }
+      k++;
+    } 
+    if(i>mid){
+        while(j<=r){
+            b[k]=a[j]
+            k++
+            j++;
+        }
+    }
+    else{
+        while(i<=mid){
+            b[k]=a[i]
+            k++
+            i++;
+        }
+    }
+    for(let k=l;k<=r;k++){
+        b[k]=a[k]
+    }
+}
