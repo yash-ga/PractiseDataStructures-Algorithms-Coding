@@ -1,8 +1,8 @@
 // console.log('yash');
 let data=[5,4,3,2,1]
 let k=3;
-let low=0;let high=data.length-1;let ans=-1;
-function search(low,high,ans){
+function search(data,k){
+    let low=0;let high=data.length-1;let ans=-1;
 
     while(low<=high){
         let mid=low+(Math.floor((high-low)/2))
@@ -19,4 +19,4 @@ function search(low,high,ans){
 }
 return ans
 }
-console.log(search(low,high,ans));
+console.log(search(data,k));
