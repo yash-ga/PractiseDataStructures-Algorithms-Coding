@@ -1,3 +1,4 @@
+//hashmap approach to solve palindrom
 let data='22022022'
 let obj={}
 for(let i=0;i<data.length;i++){
