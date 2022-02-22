@@ -1,3 +1,4 @@
+//linear approach
 let date="22022022"//please type your date
 let palindrom=""
 for(let i=date.length-1;i>=0;i--){
