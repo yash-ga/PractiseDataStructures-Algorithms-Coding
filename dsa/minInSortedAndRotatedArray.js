@@ -33,7 +33,7 @@ function runProgram(input) {
      
    if (process.env.USERNAME === "My") {
      runProgram(`10
-     1 1 1 1 1 1 1 1 1 1`);
+    9 8 7 6 5 0 1 2 3 4`);
    } else {
      process.stdin.resume();
      process.stdin.setEncoding("ascii");
